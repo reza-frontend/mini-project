@@ -1,0 +1,180 @@
+/* Font Face */
+
+@font-face {
+    font-family: "YekanBakh Light";
+    src: url("../fonts/YekanBakh-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YekanBakh Regular";
+    src: url("../fonts/YekanBakh-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YekanBakh Medium";
+    src: url("../fonts/YekanBakh-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YekanBakh Bold";
+    src: url("../fonts/YekanBakh-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "YekanBakh Heavy";
+    src: url("../fonts/YekanBakh-Heavy.woff") format("woff");
+}
+
+/* Reset Css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    font-family: "YekanBakh Bold";
+    line-height: 1;
+    font-size: 18px;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    background: linear-gradient(259deg, rgba(255, 157, 0, 0.8), rgba(255, 104, 34, 0.8));
+}
+.container {
+    width: 1094px;
+    height: 432px;
+    gap: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}
+.wrapper_fruit_juices {
+    width: 280px;
+    padding-top: 32px;
+    position: relative;
+    border-radius: 500px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+    cursor: pointer;
+}
+.image__right {
+    position: absolute;
+    right: 20px;
+    top: 64px;
+    transition-delay: 100ms;
+    transition: all 300ms ease-in-out;
+}
+.image__center {
+    position: relative;
+    height: 288px;
+    margin: 0 auto;
+    z-index: 10;
+    transition: all 300ms ease-in-out;
+
+}
+.wrapper_fruit_juices:hover .image__center {
+    transform: scale(1.2) rotate(-10deg);
+    transform-origin: 0px 80%;
+}
+.wrapper_fruit_juices:hover .image__right {
+    filter: blur(4px);
+    transform: rotate(10deg);
+}
+.wrapper_fruit_juices:hover .image__left {
+    filter: blur(4px);
+    transform: rotate(-10deg);
+}
+.image__left {
+    position: absolute;
+    left: 20px;
+    bottom: 104px;
+    transition-delay: 100ms;
+    transition: all 300ms ease-in-out;
+}
+.wrapper__fruit__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 32px;
+}
+.wrapper__fruit__title {
+    height: 27px;
+    color: #1D2939;
+}
+.wrapper__fruit__caption {
+    font-family: 'YekanBakh Light';
+    color: #1D2939;
+    height: 27px;
+}
+.info_fruit_juices {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 190px;
+    bottom: 300px;
+    width: 180px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid rgba(229, 229, 229, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 12px;
+    transition: all 300ms ease-in-out;
+}
+.wrapper_fruit_juices:hover .info_fruit_juices {
+    visibility: visible;
+    opacity: 1;
+}
+.info__title {
+    color: #1D2939;
+    display: block;
+    padding-top: 16px;
+}
+.info__caption {
+    font-family: "YekanBakh Light";
+    color: #1D2939;
+    font-size: 14px;
+    display: block;
+    padding-top: 10px;
+}
